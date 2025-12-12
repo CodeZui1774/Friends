@@ -352,3 +352,87 @@ body {
     50% { opacity: 1; transform: scale(1.5); }
     100% { opacity: 0; transform: scale(0.5); }
 }
+
+/* Điện thoại xoay ngang (Landscape) */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  #book {
+    transform: scale(0.45);
+    transform-origin: center center;
+  }
+
+  .snowflake {
+    font-size: 8px !important;
+  }
+
+  .star {
+    width: 2px;
+    height: 2px;
+  }
+
+  .wish-box {
+    font-size: 12px;
+  }
+
+  .intro-content h1 {
+    font-size: 20px;
+  }
+
+  .end-content h2 {
+    font-size: 18px;
+  }
+
+  .end-content span {
+    font-size: 13px;
+  }
+
+  /* Thu nhỏ animation nhân vật cho vừa màn hình ngang */
+  .santa {
+    width: 250px;
+    top: 25%;
+  }
+
+  .santa-dog {
+    width: 100px;
+    bottom: 10%;
+  }
+
+  @keyframes flySanta {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200vw); /* Bay ra khỏi mép trái */
+  }
+}
+
+@keyframes flySantaDog {
+  0% {
+    transform: translateX(-200vw); /* Ngoài mép trái */
+  }
+  100% {
+    transform: translateX(200vw); /* Bay ra ngoài mép phải */
+  }
+}
+
+  .snow-man,
+  .santa-tree,
+  .bear,
+  .cat {
+    transform: scale(0.6);
+  }
+
+  .snow-man{
+    bottom: 30%;
+    left: 50%;
+  }
+
+  .santa-tree{
+    bottom: 25%;
+    left: 20%;
+  }
+
+  .bear{
+    bottom: 30%;
+    left: 32%;
+  }
+}
